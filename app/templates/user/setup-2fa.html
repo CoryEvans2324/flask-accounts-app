@@ -1,0 +1,27 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Setup 2FA{% endblock %}
+
+
+{% block head %}
+<script src="/static/qrcode.min.js"></script>
+{% endblock %}
+
+{% block content %}
+<div class="flex flex-col items-center">
+	<form method="POST" class="bg-white p-8 rounded shadow grid grid-cols-1 gap-4">
+		<div id="qrcode" class="w-full flex flex-col items-center"></div>
+		<script>
+			var qrcode = new QRCode(document.getElementById('qrcode'), {
+				text: '{{ uri }}',
+				width: 200,
+				height: 200,
+				correctLevel: QRCode.CorrectLevel.H
+			})
+		</script>
+		<h1 class="text-center">
+			{{ secret }}
+		</h1>
+		<button type="submit" class="py-2 bg-blue-600 text-white font-semibold rounded shadow">Sign In</button>
+	</form>
+</div>
+{% endblock %}

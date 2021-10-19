@@ -1,0 +1,18 @@
+{% extends 'layouts/base.html' %}
+{% block title %}Sign In{% endblock %}
+{% block content %}
+<div class="flex flex-col items-center">
+	<form method="POST" class="bg-white p-8 rounded shadow grid grid-cols-1 gap-4">
+		{{ form.csrf_token() }}
+		<div class="flex flex-col">
+			{{ form.email.label }}
+			{{ form.email(class_='px-2 py-1 border-b border-gray-900 placeholder-shown:italic focus:outline-none') }}
+		</div>
+		<div class="flex flex-col">
+			{{ form.password.label }}
+			{{ form.password(class_='px-2 py-1 border-b border-gray-900 placeholder-shown:italic focus:outline-none') }}
+		</div>
+		<button type="submit" class="py-2 bg-blue-600 text-white font-semibold rounded shadow">Sign In</button>
+	</form>
+</div>
+{% endblock %}

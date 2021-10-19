@@ -1,0 +1,8 @@
+__pycache__/
+
+venv/
+node_modules/
+
+app/static/style.css
+app/settings.py
+.env

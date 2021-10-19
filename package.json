@@ -1,0 +1,19 @@
+{
+  "name": "flask-accounts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "TAILWIND_MODE=watch postcss tailwind.css -o app/static/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "cssnano": "^5.0.8",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.17"
+  }
+}

@@ -1,0 +1,9 @@
+flask
+Flask-Login
+Flask-WTF
+Flask-Session
+Flask-Bcrypt
+Flask-Mongoengine
+
+is-safe-url
+pyotp
